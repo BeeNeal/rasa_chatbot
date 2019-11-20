@@ -6,6 +6,11 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- inform_location
+- search_recipe_by_flavor
+- provide_flavor_info
+- provide_diet_info
+- want_recipe
 templates:
   utter_greet:
   - text: Hey! How are you?

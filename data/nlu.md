@@ -1,4 +1,13 @@
-<!-- write NLU model training examples -->
+<!-- write NLU model training examples
+
+These are things a user may say 
+
+label entities by enclosing in brackets with label in parentheses
+ ie: [entity](label)
+
+ Don't have to capture all possible intents , 10-15 examples/intent of good 
+ quality is a good start. Check that examples correspond to the actual intents, 
+ and make sure examples are diverse -->
 
 ## intent:affirm
 - yes
@@ -58,4 +67,36 @@
 - extremely sad
 - so sad
 
-## intent: gain_info_about_desired_recipe
+## intent:want_recipe
+- looking for a recipe
+- looking for
+- I need a recipe
+- want a 
+- recipe
+
+## intent:provide_diet_info
+- keto
+- gluten free
+- paleo
+- vegan
+
+## intent:provide_flavor_info
+- [spicy](flavor)
+- [sweet](flavor)
+- [sour](flavor)
+- [bitter](flavor)
+- [umami](flavor)
+
+## intent:search_recipe_by_flavor
+- I want something [sweet](flavor)
+- I'm craving something [sweet](flavor)
+- I want something [spicy](flavor)
+- I'm hungry for meat
+- I'd like something [salty](flavor)
+
+## intent:inform_location
+- [San Francisco](location)
+- [New York](location)
+- [Seattle](location)
+- [San Jose](location)
+
