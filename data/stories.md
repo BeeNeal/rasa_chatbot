@@ -1,3 +1,29 @@
+<!-- 
+each ## are example stories - 
+## story title
+* user 
+    - action
+ -->
+
+## Search recipe happy path
+* greet
+    - utter_greet
+* want_recipe{"flavor":"spicy", "diet":"keto"}
+    - action_recipe_search
+* thanks
+    - utter_goodbye
+
+## search recipe + flavor query
+* greet
+    -utter_greet
+* want_recipe{"diet":"keto"}
+    - utter_ask_flavor
+<!--general inform is better, than capture wider range of entities -->
+* inform{"flavor":"spicy"}
+    -action_recipe_search
+* thanks
+    - utter_goodbye
+
 ## happy path
 * greet
   - utter_greet

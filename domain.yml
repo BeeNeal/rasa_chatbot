@@ -11,6 +11,9 @@ intents:
 - provide_flavor_info
 - provide_diet_info
 - want_recipe
+entities:
+- location
+- flavor
 templates:
   utter_greet:
   - text: Hey! How are you?
@@ -32,3 +35,4 @@ actions:
 - utter_happy
 - utter_goodbye
 - utter_iamabot
+- ask_what_kind_flavor

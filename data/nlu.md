@@ -71,7 +71,7 @@ label entities by enclosing in brackets with label in parentheses
 - looking for a recipe
 - looking for
 - I need a recipe
-- want a 
+- want a recipe
 - recipe
 
 ## intent:provide_diet_info
