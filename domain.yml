@@ -1,3 +1,4 @@
+# user intents
 intents:
 - greet
 - goodbye
@@ -7,14 +8,41 @@ intents:
 - mood_unhappy
 - bot_challenge
 - inform_location
-- search_recipe_by_flavor
 - provide_flavor_info
 - provide_diet_info
 - want_recipe
+
 entities:
 - location
 - flavor
+- diet
+
+# slots require name and type - should line up to entity name
+slots:
+  diet:
+    type: text
+    auto_fill: False
+  flavor:
+    type: text
+# chatbot responses
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ask_flavor
+- utter_ask_diet_info
+- action_recipe_search
+
 templates:
+  utter_ask_flavor:
+    - text: "What type of flavor are you looking for? Spicy? Sweet?"
+    - text: "What are you in the mood for? Something sweet?"
+  utter_ask_diet_info:
+    - text: "Are you on any special diets?"
+    - text: "To give you a personalized recipe, I need your {diet} preference"
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:
@@ -28,11 +56,4 @@ templates:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-- ask_what_kind_flavor
+
