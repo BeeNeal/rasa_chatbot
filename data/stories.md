@@ -18,11 +18,28 @@ each ## are example stories -
     -utter_greet
 * want_recipe{"diet":"keto"}
     - utter_ask_flavor
+    - slot{"flavor":"spicy"}
 <!--general inform is better, than capture wider range of entities -->
 * inform{"flavor":"spicy"}
-    -action_recipe_search
+    - action_recipe_search
 * thanks
     - utter_goodbye
+
+## search recipe + diet query
+* greet
+    -utter_greet
+* want_recipe
+    - utter_ask_diet_info
+    - slot{"diet":"keto"}
+    - utter_ask_flavor
+    -slot{"flavor":"spicy"}
+
+<!--general inform is better, than capture wider range of entities -->
+* inform{"flavor":"spicy"}
+    - action_recipe_search
+* thanks
+    - utter_goodbye
+
 
 ## happy path
 * greet
