@@ -30,7 +30,10 @@ slots:
     auto_fill: False
   flavor:
     type: text
+<<<<<<< HEAD
     
+=======
+>>>>>>> ccc2c1b3958fbba9aa1bce1f637478cce431a86f
 # chatbot responses
 actions:
 - utter_greet
@@ -62,5 +65,9 @@ templates:
   utter_goodbye:
   - text: Bye
   utter_iamabot:
+<<<<<<< HEAD
   - text: I am a bot, powered by Rasa. Here to cater to all your recipes needs
+=======
+  - text: I am a bot, powered by Rasa.
+>>>>>>> ccc2c1b3958fbba9aa1bce1f637478cce431a86f
 
