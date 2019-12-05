@@ -25,6 +25,8 @@ label entities by enclosing in brackets with label in parentheses
 ## intent:deny
 - no
 - never
+- nah
+- nope
 - I don't think so
 - don't like that
 - no way
@@ -44,6 +46,7 @@ label entities by enclosing in brackets with label in parentheses
 - good morning
 - good evening
 - hey there
+- hi there
 
 ## intent:mood_great
 - perfect
@@ -75,10 +78,10 @@ label entities by enclosing in brackets with label in parentheses
 - recipe
 
 ## intent:provide_diet_info
-- keto
-- gluten free
-- paleo
-- vegan
+- [keto](diet)
+- [gluten-free](diet)
+- [paleo](diet)
+- [vegan](diet)
 
 ## intent:provide_flavor_info
 - [spicy](flavor)

@@ -1,15 +1,21 @@
 # user intents
-intents:
+# http://www.yamllint.com/
+
+# intents are cetegorical predictions based on what is meant by the user.
+intents:  
 - greet
+    # triggers: utter_greet
 - goodbye
 - affirm
 - deny
+- inform
 - mood_great
 - mood_unhappy
 - bot_challenge
 - inform_location
 - provide_flavor_info
 - provide_diet_info
+- thanks
 - want_recipe
 
 entities:
@@ -24,6 +30,7 @@ slots:
     auto_fill: False
   flavor:
     type: text
+    
 # chatbot responses
 actions:
 - utter_greet
@@ -55,5 +62,5 @@ templates:
   utter_goodbye:
   - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am a bot, powered by Rasa. Here to cater to all your recipes needs
 

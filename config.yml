@@ -1,6 +1,23 @@
+# http://www.yamllint.com/
+
 language: en
 pipeline: pretrained_embeddings_spacy
 policies:
 - name: MemoizationPolicy
+  max_history: 3  # how many dialogue turns will look at when making predictions
+  # priority: 3 # determines priority of policy
 - name: KerasPolicy
-- name: MappingPolicy
+  epochs: 200
+  validation_split: 0.1 #amt of data used to evaluate the model during training
+  random_seed: 1 # reproducible results for same input
+- name: MappingPolicy # add business logic to model
+- name: FormPolicy # to use, must define form_action, which requires more info
+# - name: TwoStageFallbackPolicy
+#   nlu_threshold: 0.3
+#   ambiguity_threshold: 0.1
+#   core_threshold: 0.3
+#   # triggered if confidence is below threshold
+#   fallback_core_action_name: "action_default_fallback"
+#   fallback_nlu_action_name: "action_default_fallback"
+#   # used when user denies suggested intent
+#   deny_suggestion_intent_name: "out_of_scope" 
