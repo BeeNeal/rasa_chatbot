@@ -103,3 +103,12 @@ label entities by enclosing in brackets with label in parentheses
 - [Seattle](location)
 - [San Jose](location)
 
+## regex:email
+- ^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$
+
+## synonym: keto-code
+    - keto
+    - high-fat
+    - high fat
+    - low-carb
+    - low carb
