@@ -17,11 +17,13 @@ intents:
 - provide_diet_info
 - thanks
 - want_recipe
+- provide_purpose
 
 entities:
 - location
 - flavor
 - diet
+- purpose
 
 # slots require name and type - should line up to entity name
 slots:
@@ -29,6 +31,8 @@ slots:
     type: text
     auto_fill: False
   flavor:
+    type: text
+  purpose:
     type: text
     
 # chatbot responses
@@ -41,6 +45,7 @@ actions:
 - utter_iamabot
 - utter_ask_flavor
 - utter_ask_diet_info
+- utter_ask_purpose
 - action_recipe_search
 
 templates:
@@ -63,4 +68,6 @@ templates:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa. Here to cater to all your recipes needs
+  utter_ask_purpose:
+  - text: What do you need that for? Breakfast? Lunch? Dinner? Going to a potluck?
 

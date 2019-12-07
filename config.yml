@@ -1,7 +1,14 @@
 # http://www.yamllint.com/
 
 language: en
-pipeline: pretrained_embeddings_spacy
+pipeline: 
+- name: "WhitespaceTokenizer"
+- name: "pretrained_embeddings_spacy"
+- name: "EntitySynonymMapper"
+
+
+
+
 policies:
 - name: MemoizationPolicy
   max_history: 3  # how many dialogue turns will look at when making predictions

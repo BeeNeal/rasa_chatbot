@@ -5,6 +5,12 @@ each ## are example stories -
     - action
  -->
 
+## provide purpose
+* greet
+    -utter_greet
+* want_recipe
+    -utter_ask_purpose
+
 ## Search recipe happy path
 * greet
     - utter_greet

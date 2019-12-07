@@ -15,6 +15,9 @@ label entities by enclosing in brackets with label in parentheses
 - of course
 - that sounds good
 - correct
+- right
+- definitely
+- absolutely
 
 ## intent:bot_challenge
 - are you a bot?
@@ -38,6 +41,8 @@ label entities by enclosing in brackets with label in parentheses
 - goodbye
 - see you around
 - see you later
+- see ya
+- peace
 
 ## intent:greet
 - hey
@@ -47,6 +52,9 @@ label entities by enclosing in brackets with label in parentheses
 - good evening
 - hey there
 - hi there
+- how's it going
+- how's it goin?
+- howdy
 
 ## intent:mood_great
 - perfect
@@ -90,6 +98,16 @@ label entities by enclosing in brackets with label in parentheses
 - [bitter](flavor)
 - [umami](flavor)
 
+## intent:provide_purpose
+- I need something for a [potluck](purpose)
+- I need a [dinner](purpose) recipe
+- I want [dessert]([purpose])
+- I'm looking for something to eat for [breakfast](purpose)
+- I'm looking for something [quick](purpose)
+- I need something I can cook quickly
+- I'd like something for [lunch](purpose)
+- 
+
 ## intent:search_recipe_by_flavor
 - I want something [sweet](flavor)
 - I'm craving something [sweet](flavor)
@@ -112,3 +130,9 @@ label entities by enclosing in brackets with label in parentheses
     - high fat
     - low-carb
     - low carb
+
+## synonym: quick
+    - quick
+    - quickly
+    - in under 30
+    - in under 30 minutes
