@@ -13,10 +13,16 @@ policies:
 - name: MemoizationPolicy
   max_history: 3  # how many dialogue turns will look at when making predictions
   # priority: 3 # determines priority of policy
+
+  # The KerasPolicy uses a neural network implemented in Keras to select the next 
+  # action. The default architecture is based on an LSTM,
 - name: KerasPolicy
   epochs: 200
   validation_split: 0.1 #amt of data used to evaluate the model during training
   random_seed: 1 # reproducible results for same input
+
+# The MappingPolicy can be used to directly map intents to actions.
+#  The mappings are assigned by giving an intent the property triggers
 - name: MappingPolicy # add business logic to model
 - name: FormPolicy # to use, must define form_action, which requires more info
 # - name: TwoStageFallbackPolicy

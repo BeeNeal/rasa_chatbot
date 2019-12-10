@@ -78,6 +78,28 @@ label entities by enclosing in brackets with label in parentheses
 - extremely sad
 - so sad
 
+## intent:ask_about_star_wars
+- hey do you know anything about star wars?
+- have you seen star wars?
+- Star Wars
+- star wars
+
+## intent:provide_star_wars_char_info
+- [Leia](sw_character)
+- [Luke](sw_character) Skywalker
+- Princess [Leia](sw_character)
+- [Leia](sw_character) Organa
+- [Han](sw_character)
+- [Han](sw_character) Solo
+- [Chewie](sw_character)
+- Chewbacca
+- [Luke](sw_character)
+- [Darth Vader](sw_character)
+- Darth
+- Vader
+- [R2-D2](sw_character)
+- [C-3PO](sw_character)
+
 ## intent:want_recipe
 - looking for a recipe
 - looking for

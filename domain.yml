@@ -47,6 +47,8 @@ actions:
 - utter_ask_diet_info
 - utter_ask_purpose
 - action_recipe_search
+- action_star_wars_search
+- ask_for_star_wars_character_info
 
 templates:
   utter_ask_flavor:

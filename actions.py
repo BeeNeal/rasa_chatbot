@@ -31,3 +31,49 @@ class ActionFetchRecipe(Action):
 
         # these events must be reflected in training stories
         return [SlotSet("diet", diet)]
+
+# Using the SWAPI API to return Star Wars data 
+
+ENDPOINTS = {
+    "base": "https://swapi.co/api/people/"
+},
+
+class ActionFetchStarWarsCharacterInfo(Action):
+
+    def name(self) -> Text:
+        return "action_star_wars_search"
+
+     def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        sw_chars_to_id = dict(
+            "Leia": 5,
+            "Han": 14,
+            "Chewie": 13,
+            "Luke": 1,
+            "C-3PO": 2,
+            "R2-D2": 3,
+            "Darth Vader": 4,
+        )
+        sw_character = tracker.get_slot("sw_character")
+        full_path = ENDPOINTS[0] + sw_chars_to_id[sw_character]
+        results = requests.get(full_path).json()
+        if results:
+            hair_color = results['hair_color']
+            height = results['height']
+            full_name = results['name']
+        return "{} has {} hair, and is {}cm tall.".format(full_name)
+
+        else:
+            print("CHARACTER NOT FOUND")
+            return "Hmm I don't know that character..."
+
+
+        dispatcher.utter_message("Cool, let me find some info about {} for you!".format(sw_character))
+
+def _create_path(base, sw_char_id):
+    """Creates path to find star wars character data using endpoints"""
+
+    # as of right now, is overkill
+    pass
