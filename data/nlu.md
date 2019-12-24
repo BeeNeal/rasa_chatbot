@@ -18,6 +18,7 @@ label entities by enclosing in brackets with label in parentheses
 - right
 - definitely
 - absolutely
+- sure
 
 ## intent:bot_challenge
 - are you a bot?
@@ -84,6 +85,9 @@ label entities by enclosing in brackets with label in parentheses
 - Star Wars
 - star wars
 
+## intent:provide_recipe
+- Can you save www.recipe@this.com for later?
+
 ## intent:provide_star_wars_char_info
 - [Leia](sw_character)
 - [Luke](sw_character) Skywalker
@@ -106,6 +110,14 @@ label entities by enclosing in brackets with label in parentheses
 - I need a recipe
 - want a recipe
 - recipe
+- I'm searching for a recipe that uses olives
+- Do you have a recipe
+- Can you give me an idea for
+- Can you give me a dessert idea
+- what is your favorite dessert?
+- What's the best broccoli dish?
+- what's a good salad dressing?
+- what's good to eat when you're feeling sick?
 
 ## intent:provide_diet_info
 - [keto](diet)

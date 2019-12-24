@@ -2,7 +2,7 @@
 each ## are example stories - 
 ## story title
 * user 
-    - action
+    - action taken by assistant
  -->
 
 ## provide purpose

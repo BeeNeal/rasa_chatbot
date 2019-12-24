@@ -1,12 +1,15 @@
 # http://www.yamllint.com/
-
+--- 
 language: en
-pipeline: 
-- name: "WhitespaceTokenizer"
-- name: "pretrained_embeddings_spacy"
+# can either use this predefined pipeline, or customize pipline and naming them
+pipeline: # pretrained_embeddings_spacy  
+- name: "SpacyNLP"
+- name: SpacyTokenizer
+- name: "SpacyFeaturizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
-
-
+- name: "SklearnIntentClassifier"
 
 
 policies:
@@ -17,7 +20,7 @@ policies:
   # The KerasPolicy uses a neural network implemented in Keras to select the next 
   # action. The default architecture is based on an LSTM,
 - name: KerasPolicy
-  epochs: 200
+  epochs: 50
   validation_split: 0.1 #amt of data used to evaluate the model during training
   random_seed: 1 # reproducible results for same input
 
