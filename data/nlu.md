@@ -36,6 +36,7 @@ label entities by enclosing in brackets with label in parentheses
 - no way
 - not really
 - what?
+- negative
 
 ## intent:goodbye
 - bye
@@ -78,6 +79,7 @@ label entities by enclosing in brackets with label in parentheses
 - not very good
 - extremely sad
 - so sad
+- feeling blue
 
 ## intent:ask_about_star_wars
 - hey do you know anything about star wars?
@@ -118,12 +120,21 @@ label entities by enclosing in brackets with label in parentheses
 - What's the best broccoli dish?
 - what's a good salad dressing?
 - what's good to eat when you're feeling sick?
+- I need something for a [potluck](purpose)
+- I need an item for a [potluck](purpose)
+- I need a [dinner](purpose) recipe
+- I want [dessert]([purpose])
+- I need [dessert]([purpose])
+- I need to bring something for a [potluck]([purpose])
+- I need to bring something to a [potluck]([purpose])
+- What's a good dish to bring to a [potluck]([purpose])?
+- I'm looking for something to eat for [breakfast](purpose)
+- I'm looking for something [quick](purpose)
+- I need something I can cook quickly
+- I'd like something for [lunch](purpose)
 
-## intent:provide_diet_info
-- [keto](diet)
-- [gluten-free](diet)
-- [paleo](diet)
-- [vegan](diet)
+## intent:provide_purpose
+- belongs to above
 
 ## intent:provide_flavor_info
 - [spicy](flavor)
@@ -131,15 +142,14 @@ label entities by enclosing in brackets with label in parentheses
 - [sour](flavor)
 - [bitter](flavor)
 - [umami](flavor)
+- [refreshing](flavor)
 
-## intent:provide_purpose
-- I need something for a [potluck](purpose)
-- I need a [dinner](purpose) recipe
-- I want [dessert]([purpose])
-- I'm looking for something to eat for [breakfast](purpose)
-- I'm looking for something [quick](purpose)
-- I need something I can cook quickly
-- I'd like something for [lunch](purpose)
+
+## intent:provide_diet_info
+- [keto](diet)
+- [gluten-free](diet)
+- [paleo](diet)
+- [vegan](diet)
 - 
 
 ## intent:search_recipe_by_flavor
