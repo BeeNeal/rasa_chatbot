@@ -7,44 +7,44 @@ each ## are example stories -
 
 ## provide purpose
 * greet
-    -utter_greet
+  -utter_greet
 * want_recipe
-    -utter_ask_purpose
+  -utter_ask_purpose
 
 ## Search recipe happy path
 * greet
-    - utter_greet
+  - utter_greet
 * want_recipe{"flavor":"spicy", "diet":"keto"}
-    - action_recipe_search
+  - action_recipe_search
 * thanks
-    - utter_goodbye
+  - utter_goodbye
 
 ## search recipe + flavor query
 * greet
-    -utter_greet
+  - utter_greet
 * want_recipe{"diet":"keto"}
-    - utter_ask_flavor
-    - slot{"flavor":"spicy"}
+	- utter_ask_flavor
+	- slot{"flavor":"spicy"}
 <!--general inform is better, than capture wider range of entities -->
 * inform{"flavor":"spicy"}
-    - action_recipe_search
+  - action_recipe_search
 * thanks
-    - utter_goodbye
+  - utter_goodbye
 
 ## search recipe + diet query
 * greet
-    -utter_greet
+  - utter_greet
 * want_recipe
-    - utter_ask_diet_info
-    - slot{"diet":"keto"}
-    - utter_ask_flavor
-    -slot{"flavor":"spicy"}
+	- utter_ask_diet_info
+	- slot{"diet":"keto"}
+	- utter_ask_flavor
+	-slot{"flavor":"spicy"}
 
 <!--general inform is better, than capture wider range of entities -->
 * inform{"flavor":"spicy"}
-    - action_recipe_search
+   - action_recipe_search
 * thanks
-    - utter_goodbye
+  - utter_goodbye
 
 
 ## happy path
@@ -52,6 +52,13 @@ each ## are example stories -
   - utter_greet
 * mood_great
   - utter_happy
+
+
+## save recipe for later path
+* provide_recipe
+  - utter_store_recipe_confirmation
+* thanks
+  - utter_goodbye
 
 ## sad path 1
 * greet

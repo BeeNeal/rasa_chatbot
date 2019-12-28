@@ -20,6 +20,14 @@ label entities by enclosing in brackets with label in parentheses
 - absolutely
 - sure
 
+## thanks
+- thanks
+- thank you
+- great! Thank you!
+- awesome, you're the best
+- you're the best
+- appreciate it
+
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
@@ -88,7 +96,14 @@ label entities by enclosing in brackets with label in parentheses
 - star wars
 
 ## intent:provide_recipe
-- Can you save www.recipe@this.com for later?
+- Can you save www.recipe@this.com for later? 
+- Can you add this recipe to my saved recipes?
+- Please add this recipe to my save-for-later
+- please save this recipe
+- can you save this recipe URL for me?
+- please keep this recipe
+- please add this recipe: www.recipe@this.com
+- store this www.recipe@this.com recipe for me 
 
 ## intent:provide_star_wars_char_info
 - [Leia](sw_character)

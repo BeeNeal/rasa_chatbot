@@ -15,9 +15,11 @@ intents:
 - inform_location
 - provide_flavor_info
 - provide_diet_info
+- provide_recipe
 - thanks
 - want_recipe
 - provide_purpose
+- ask_about_star_wars
 
 entities:
 - location
@@ -34,8 +36,7 @@ slots:
     type: text
   purpose:
     type: text
-    
-# chatbot responses
+
 actions:
 - utter_greet
 - utter_cheer_up
@@ -46,6 +47,7 @@ actions:
 - utter_ask_flavor
 - utter_ask_diet_info
 - utter_ask_purpose
+- utter_store_recipe_confirmation
 - action_recipe_search
 - action_star_wars_search
 - ask_for_star_wars_character_info
@@ -72,4 +74,7 @@ templates:
   - text: I am a bot, powered by Rasa. Here to cater to all your recipes needs
   utter_ask_purpose:
   - text: What do you need that for? Breakfast? Lunch? Dinner? Going to a potluck?
+  utter_store_recipe_confirmation:
+  - text: Sure thing! I'll save this in your "try later" folder
+
 
