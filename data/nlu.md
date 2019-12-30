@@ -89,21 +89,13 @@ label entities by enclosing in brackets with label in parentheses
 - so sad
 - feeling blue
 
+<!-- star wars test b/c convenient SWAPI API for custom functions -->
 ## intent:ask_about_star_wars
 - hey do you know anything about star wars?
 - have you seen star wars?
 - Star Wars
 - star wars
 
-## intent:provide_recipe
-- Can you save www.recipe@this.com for later? 
-- Can you add this recipe to my saved recipes?
-- Please add this recipe to my save-for-later
-- please save this recipe
-- can you save this recipe URL for me?
-- please keep this recipe
-- please add this recipe: www.recipe@this.com
-- store this www.recipe@this.com recipe for me 
 
 ## intent:provide_star_wars_char_info
 - [Leia](sw_character)
@@ -121,13 +113,36 @@ label entities by enclosing in brackets with label in parentheses
 - [R2-D2](sw_character)
 - [C-3PO](sw_character)
 
+## intent:provide_recipe
+- Can you save www.recipe@this.com for later? 
+- Can you add this recipe to my saved recipes?
+- Please add this recipe to my save-for-later
+- please save this recipe
+- can you save this recipe URL for me?
+- please keep this recipe
+- please add this recipe: www.recipe@this.com
+- store this www.recipe@this.com recipe for me 
+- would you save this recipe for me?
+- save this
+- I want to save this recipe
+- I want to save this for later
+- I need this for later
+- I need to try this later
+- add this to my save for later
+- file this away for later
+
+## intent:provide_ingredient
+- I'm searching for a recipe that uses [olives](ingredient)
+- I have [olives](ingredient) I want to use up
+- I need a recipe that uses olives
+- I'm looking for a recipe with pistachios
+
 ## intent:want_recipe
 - looking for a recipe
 - looking for
 - I need a recipe
 - want a recipe
 - recipe
-- I'm searching for a recipe that uses olives
 - Do you have a recipe
 - Can you give me an idea for
 - Can you give me a dessert idea
@@ -138,18 +153,19 @@ label entities by enclosing in brackets with label in parentheses
 - I need something for a [potluck](purpose)
 - I need an item for a [potluck](purpose)
 - I need a [dinner](purpose) recipe
-- I want [dessert]([purpose])
-- I need [dessert]([purpose])
-- I need to bring something for a [potluck]([purpose])
-- I need to bring something to a [potluck]([purpose])
-- What's a good dish to bring to a [potluck]([purpose])?
+- I want [dessert](purpose)
+- I need [dessert](purpose)
+- I need to bring something for a [potluck](purpose)
+- I need to bring something to a [potluck](purpose)
+- What's a good dish to bring to a [potluck](purpose)?
 - I'm looking for something to eat for [breakfast](purpose)
 - I'm looking for something [quick](purpose)
 - I need something I can cook quickly
 - I'd like something for [lunch](purpose)
-
-## intent:provide_purpose
-- belongs to above
+- I'm searching for a [paleo](diet) recipe
+- I'm [paleo](diet) and need a [dessert](purpose) recipe
+- Do you have any [paleo](diet) [dessert](purpose) recipes?
+- Do you have any recipes for a [paleo](diet) [dessert](purpose)?
 
 ## intent:provide_flavor_info
 - [spicy](flavor)

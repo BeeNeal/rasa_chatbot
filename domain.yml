@@ -1,7 +1,8 @@
-# user intents
+# user intents, bot actions, templates
 # http://www.yamllint.com/
 
 # intents are categorical predictions based on what is meant by the user.
+# list of intents that assistant can understand - intents come from NLU model
 intents:  
 - greet
     # triggers: utter_greet
@@ -13,12 +14,12 @@ intents:
 - mood_unhappy
 - bot_challenge
 - inform_location
-- provide_flavor_info
 - provide_diet_info
+- provide_flavor_info
 - provide_recipe
+- provide_ingredient
 - thanks
 - want_recipe
-- provide_purpose
 - ask_about_star_wars
 
 entities:
@@ -26,17 +27,20 @@ entities:
 - flavor
 - diet
 - purpose
+- ingredient
 
-# slots require name and type - should line up to entity name
+# slots require name and type - should line up to entity name, bot's memory
 slots:
   diet:
     type: text
-    auto_fill: False
   flavor:
     type: text
   purpose:
     type: text
+  ingredient:
+    type: list
 
+# come from story data
 actions:
 - utter_greet
 - utter_cheer_up
@@ -47,18 +51,24 @@ actions:
 - utter_ask_flavor
 - utter_ask_diet_info
 - utter_ask_purpose
+- utter_ask_ingedients
 - utter_store_recipe_confirmation
 - action_recipe_search
 - action_star_wars_search
 - ask_for_star_wars_character_info
 
+# response that bot gives to user
+# Can contain images, buttons, custom payloads, etc.
 templates:
   utter_ask_flavor:
     - text: "What type of flavor are you looking for? Spicy? Sweet?"
     - text: "What are you in the mood for? Something sweet?"
   utter_ask_diet_info:
     - text: "Are you on any special diets?"
-    - text: "To give you a personalized recipe, I need your {diet} preference"
+    - text: "To give you a personalized recipe, I need your diet preference"
+  utter_ask_ingedients:
+    - text: "So far I know you want to use the following ingredients: {ingredient}. 
+            Are there any other ingredients you want to use?"
   utter_greet:
   - text: Hey! How are you?
   utter_cheer_up:

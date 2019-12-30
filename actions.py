@@ -39,15 +39,17 @@ ENDPOINTS = {
 },
 
 class ActionFetchStarWarsCharacterInfo(Action):
-
+    # name is the title for the trigger to run the action
     def name(self) -> Text:
         return "action_star_wars_search"
 
-     def run(self, dispatcher: CollectingDispatcher,
+    # the actual action that gets run when name is invoked
+    def run(self, dispatcher: CollectingDispatcher,
+        # tracker keeps track of slots
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        sw_chars_to_id = dict(
+        sw_chars_to_id = {
             "Leia": 5,
             "Han": 14,
             "Chewie": 13,
@@ -55,7 +57,7 @@ class ActionFetchStarWarsCharacterInfo(Action):
             "C-3PO": 2,
             "R2-D2": 3,
             "Darth Vader": 4,
-        )
+        }
         sw_character = tracker.get_slot("sw_character")
         full_path = ENDPOINTS[0] + sw_chars_to_id[sw_character]
         results = requests.get(full_path).json()
@@ -63,13 +65,13 @@ class ActionFetchStarWarsCharacterInfo(Action):
             hair_color = results['hair_color']
             height = results['height']
             full_name = results['name']
-        return "{} has {} hair, and is {}cm tall.".format(full_name)
+            return "{} has {} hair, and is {}cm tall.".format(full_name)
 
         else:
             print("CHARACTER NOT FOUND")
             return "Hmm I don't know that character..."
 
-
+        # dispatcher sends response back to user
         dispatcher.utter_message("Cool, let me find some info about {} for you!".format(sw_character))
 
 def _create_path(base, sw_char_id):
