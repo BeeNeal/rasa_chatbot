@@ -7,9 +7,10 @@ each ## are example stories -
 
 ## provide purpose
 * greet
-  -utter_greet
+  - utter_greet
 * want_recipe
-  -utter_ask_purpose
+	- action_recipe_search
+  - utter_ask_purpose
 
 ## Search recipe happy path
 * greet

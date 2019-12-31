@@ -189,6 +189,10 @@ label entities by enclosing in brackets with label in parentheses
 - I want something [spicy](flavor)
 - I'm hungry for meat
 - I'd like something [salty](flavor)
+- I'm in the mood for something [salty](flavor)
+- I'm in the mood for something [savory](flavor)
+- Something [sweet](flavor) sounds good
+- Something [sugary](flavor) sounds good
 
 ## intent:inform_location
 - [San Francisco](location)
@@ -200,11 +204,25 @@ label entities by enclosing in brackets with label in parentheses
 - ^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$
 
 ## synonym: keto-code
-    - keto
-    - high-fat
-    - high fat
-    - low-carb
-    - low carb
+	- keto
+	- high-fat
+	- high fat
+	- low-carb
+	- low carb
+
+## synonym: sweet
+	- sweet
+	- sugar
+	- sugary
+	- sugared
+	- sweetened
+	- saccharine
+
+## synonym: salty
+	- salt
+	- salty
+	- salted
+	- savory
 
 ## synonym: quick
     - quick
