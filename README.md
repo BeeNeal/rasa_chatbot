@@ -1,16 +1,16 @@
 # Recipe Presenting Chatbot
 
-MVP:
+MVP: \
 Chatbot designed to search the database of recipes, and easily deliver a recipe
 that suits the user's dietary and flavor requirements.
 
-2.0
+2.0 \
 Chatbot will be able to search recipes based on dietary and flavor requirements, 
 as well as specified ingredients.
 
 ## Getting Started
 
-- create a virtual environment
+- create a virtual environment \
 pip install -r requirements.txt
 
 ## Built With
