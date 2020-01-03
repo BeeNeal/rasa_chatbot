@@ -10,7 +10,7 @@ as well as specified ingredients.
 
 ## Getting Started
 
-- create a virtual environment \
+create a virtual environment \
 pip install -r requirements.txt
 
 ## Built With

@@ -210,6 +210,11 @@ label entities by enclosing in brackets with label in parentheses
 	- low-carb
 	- low carb
 
+## synonym: paleo
+	- paleo
+	- primal
+	- grain-free
+
 ## synonym: sweet
 	- sweet
 	- sugar

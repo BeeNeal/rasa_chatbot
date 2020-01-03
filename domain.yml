@@ -21,6 +21,8 @@ intents:
 - thanks
 - want_recipe
 - ask_about_star_wars
+- ask_whats_possible
+- out_of_scope
 
 entities:
 - location
@@ -56,6 +58,8 @@ actions:
 - action_recipe_search
 - action_star_wars_search
 - ask_for_star_wars_character_info
+- utter_cannot_help
+- utter_explain_whats_possible
 
 # response that bot gives to user
 # Can contain images, buttons, custom payloads, etc.
@@ -71,6 +75,10 @@ templates:
             Are there any other ingredients you want to use?"
   utter_greet:
   - text: Hey! How are you?
+  utter_new_user_greet:
+  - text: Hey! Haven't seen you around here before! Or if I have, please sign in
+  buttons:
+    - title: "Log in"
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg

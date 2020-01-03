@@ -5,6 +5,10 @@ each ## are example stories -
     - action taken by assistant
  -->
 
+## determine preferences
+* greet
+	- utter_new_user_greet
+
 ## provide purpose
 * greet
   - utter_greet
@@ -86,3 +90,12 @@ each ## are example stories -
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## user asks whats possible
+* ask_whats_possible
+  - utter_explain_whats_possible
+
+## user asks for something out of scope
+* out_of_scope
+  - utter_cannot_help
+  - utter_explain_whats_possible
