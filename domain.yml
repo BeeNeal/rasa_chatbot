@@ -89,10 +89,12 @@ templates:
   utter_goodbye:
   - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa. Here to cater to all your recipes needs
+  - text: I am a bot, powered by Rasa. Here to cater to all your recipe needs
   utter_ask_purpose:
   - text: What do you need that for? Breakfast? Lunch? Dinner? Going to a potluck?
   utter_store_recipe_confirmation:
   - text: Sure thing! I'll save this in your "try later" folder
-
-
+utter_cannot_help:
+  - text: "Sorry boss! No can do - I'm just a recipe bot."
+utter_explain_whats_possible:
+  - text: "I'm good at finding recipes!"

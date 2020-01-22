@@ -200,6 +200,11 @@ label entities by enclosing in brackets with label in parentheses
 - [Seattle](location)
 - [San Jose](location)
 
+## intent: ask_whats_possible
+- what can you do?
+- What are you good for?
+- Can you help me with
+
 ## regex:email
 - ^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$
 
