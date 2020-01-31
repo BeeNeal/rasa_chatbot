@@ -28,10 +28,10 @@ policies:
 #  The mappings are assigned by giving an intent the property triggers
 - name: MappingPolicy # add business logic to model
 - name: FormPolicy # to use, must define form_action, which requires more info
-# - name: TwoStageFallbackPolicy
-#   nlu_threshold: 0.3
-#   ambiguity_threshold: 0.1
-#   core_threshold: 0.3
+- name: TwoStageFallbackPolicy
+  nlu_threshold: 0.8
+  ambiguity_threshold: 0.1
+  core_threshold: 0.3
 #   # triggered if confidence is below threshold
 #   fallback_core_action_name: "action_default_fallback"
 #   fallback_nlu_action_name: "action_default_fallback"

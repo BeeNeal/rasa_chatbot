@@ -79,3 +79,7 @@ def _create_path(base, sw_char_id):
 
     # as of right now, is overkill
     pass
+
+# _______________________________________
+def fetch_recipe():
+    """Fetch recipe from DB"""

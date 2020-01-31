@@ -181,7 +181,10 @@ label entities by enclosing in brackets with label in parentheses
 - [gluten-free](diet)
 - [paleo](diet)
 - [vegan](diet)
-- 
+- I only eat [keto](diet)
+- I eat [keto](diet)
+- I'm strictly [vegan](diet)
+- I'm a strict [vegan](diet)
 
 ## intent:search_recipe_by_flavor
 - I want something [sweet](flavor)

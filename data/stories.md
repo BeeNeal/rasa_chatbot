@@ -99,3 +99,8 @@ each ## are example stories -
 * out_of_scope
   - utter_cannot_help
   - utter_explain_whats_possible
+
+<!-- ## fallback policy
+   - utter_clarify
+   - utter_explain_whats_possible -->
+   - 
