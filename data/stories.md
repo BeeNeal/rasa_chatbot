@@ -51,7 +51,6 @@ each ## are example stories -
 * thanks
   - utter_goodbye
 
-
 ## happy path
 * greet
   - utter_greet
@@ -103,4 +102,3 @@ each ## are example stories -
 <!-- ## fallback policy
    - utter_clarify
    - utter_explain_whats_possible -->
-   - 
