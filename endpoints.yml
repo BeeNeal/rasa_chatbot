@@ -35,8 +35,12 @@ action_endpoint:
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/
 
-#event_broker:
- url: localhost
- username: recipe_collection
- password: password
- queue: queue
+#event_broker to recipe_collection DB:
+  # type: 'SQL'
+  # host: '127.0.0.1'
+  # port: '5432'
+  # dialect: 'postgresql'
+  # username: 'bneal'
+  # password: '123456'
+  # db: 'recipe_collection'
+

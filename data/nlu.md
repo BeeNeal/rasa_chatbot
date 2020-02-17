@@ -1,14 +1,3 @@
-<!-- write NLU model training examples
-
-These are things a user may say 
-
-label entities by enclosing in brackets with label in parentheses
- ie: [entity](label)
-
- Don't have to capture all possible intents , 10-15 examples/intent of good 
- quality is a good start. Check that examples correspond to the actual intents, 
- and make sure examples are diverse -->
-
 ## intent:affirm
 - yes
 - indeed
@@ -19,8 +8,6 @@ label entities by enclosing in brackets with label in parentheses
 - definitely
 - absolutely
 - sure
-
-## thanks
 - thanks
 - thank you
 - great! Thank you!
@@ -89,13 +76,11 @@ label entities by enclosing in brackets with label in parentheses
 - so sad
 - feeling blue
 
-<!-- star wars test b/c convenient SWAPI API for custom functions -->
 ## intent:ask_about_star_wars
 - hey do you know anything about star wars?
 - have you seen star wars?
 - Star Wars
 - star wars
-
 
 ## intent:provide_star_wars_char_info
 - [Leia](sw_character)
@@ -114,14 +99,14 @@ label entities by enclosing in brackets with label in parentheses
 - [C-3PO](sw_character)
 
 ## intent:provide_recipe
-- Can you save www.recipe@this.com for later? 
+- Can you save www.recipe@this.com for later?
 - Can you add this recipe to my saved recipes?
 - Please add this recipe to my save-for-later
 - please save this recipe
 - can you save this recipe URL for me?
 - please keep this recipe
 - please add this recipe: www.recipe@this.com
-- store this www.recipe@this.com recipe for me 
+- store this www.recipe@this.com recipe for me
 - would you save this recipe for me?
 - save this
 - I want to save this recipe
@@ -175,7 +160,6 @@ label entities by enclosing in brackets with label in parentheses
 - [umami](flavor)
 - [refreshing](flavor)
 
-
 ## intent:provide_diet_info
 - [keto](diet)
 - [gluten-free](diet)
@@ -203,42 +187,42 @@ label entities by enclosing in brackets with label in parentheses
 - [Seattle](location)
 - [San Jose](location)
 
-## intent: ask_whats_possible
+## intent:ask_whats_possible
 - what can you do?
 - What are you good for?
 - Can you help me with
 
-## regex:email
-- ^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$
-
 ## synonym: keto-code
-	- keto
-	- high-fat
-	- high fat
-	- low-carb
-	- low carb
+- keto
+- high-fat
+- high fat
+- low-carb
+- low carb
 
 ## synonym: paleo
-	- paleo
-	- primal
-	- grain-free
-
-## synonym: sweet
-	- sweet
-	- sugar
-	- sugary
-	- sugared
-	- sweetened
-	- saccharine
-
-## synonym: salty
-	- salt
-	- salty
-	- salted
-	- savory
+- paleo
+- primal
+- grain-free
 
 ## synonym: quick
-    - quick
-    - quickly
-    - in under 30
-    - in under 30 minutes
+- quick
+- quickly
+- in under 30
+- in under 30 minutes
+
+## synonym: salty
+- salt
+- salty
+- salted
+- savory
+
+## synonym: sweet
+- sweet
+- sugar
+- sugary
+- sugared
+- sweetened
+- saccharine
+
+## regex:email
+- ^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$

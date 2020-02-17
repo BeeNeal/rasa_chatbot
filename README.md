@@ -21,6 +21,11 @@ pip install -r requirements.txt
 
 * **Brittany Neal**
 
+### to-do
+- combine intents under one umbrella 'inform'
+- when integrating with RC site, take user preferences from DB (such as user diet preference)
+- add story for a user preference if didn't find a recipe under that diet preference
+
 
 ## License
 

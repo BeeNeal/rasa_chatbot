@@ -18,10 +18,11 @@ class ActionFetchRecipe(Action):
 # refers to the name of the action used when creating training stories
 # how rasa knows which action to run when predicted
     def name(self) -> Text:
-        return "action_recipe_search"
+        return "action_recipe_searchs" # FIX THIS *&#*#*#&@)& (take off s)
 # define what the action does
     def run(self, dispatcher: CollectingDispatcher,
-        # tracker keeps track of conversation state
+        # tracker keeps track of conversation state, and which slots should be
+        # filled at certain states
         # dispatcher sends response back to user
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -83,3 +84,8 @@ def _create_path(base, sw_char_id):
 # _______________________________________
 def fetch_recipe():
     """Fetch recipe from DB"""
+
+    def name(self) -> Text:
+        return "action_recipe_search"
+
+    dispatcher.utter_message("This is working!") 

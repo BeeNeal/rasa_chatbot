@@ -102,3 +102,7 @@ each ## are example stories -
 <!-- ## fallback policy
    - utter_clarify
    - utter_explain_whats_possible -->
+## interactive_story_1
+* greet
+    - action_default_ask_affirmation
+* out_of_scope

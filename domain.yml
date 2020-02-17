@@ -1,97 +1,89 @@
-# intents are categorical predictions based on what is meant by the user.
-# list of intents that assistant can understand - intents come from NLU model
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - inform
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - inform_location
-  - provide_diet_info
-  - provide_flavor_info
-  - provide_recipe
-  - provide_ingredient
-  - thanks
-  - want_recipe
-  - ask_about_star_wars
-  - ask_whats_possible
-  - out_of_scope
-  - search_recipe_by_flavor
-  - provide_star_wars_char_info
-
+actions:
+- action_recipe_search
+- action_star_wars_search
+- ask_for_star_wars_character_info
+- utter_ask_diet_info
+- utter_ask_flavor
+- utter_ask_ingedients
+- utter_ask_purpose
+- utter_cannot_help
+- utter_cheer_up
+- utter_did_that_help
+- utter_explain_whats_possible
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_new_user_greet
+- utter_store_recipe_confirmation
 entities:
-  - location
-  - flavor
-  - diet
-  - purpose
-  - ingredient
-
-# slots require name and type - should line up to entity name, bot's memory
+- diet
+- flavor
+- ingredient
+- location
+- purpose
+intents:
+- out_of_scope
+- greet
+- goodbye
+- affirm
+- deny
+- inform
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inform_location
+- provide_diet_info
+- provide_flavor_info
+- provide_recipe
+- provide_ingredient
+- thanks
+- want_recipe
+- ask_about_star_wars
+- ask_whats_possible
+- search_recipe_by_flavor
+- provide_star_wars_char_info
+responses:
+  utter_ask_diet_info:
+  - text: Are you on any special diets?
+  - text: To give you a personalized recipe, I need your diet preference
+  utter_ask_flavor:
+  - text: What type of flavor are you looking for? Spicy? Sweet?
+  - text: What are you in the mood for? Something sweet?
+  utter_ask_ingedients:
+  - text: 'So far I know you want to use the following ingredients: {ingredient}.
+      Are there any other ingredients you want to use?'
+  utter_ask_purpose:
+  - text: What do you need that for? Breakfast? Lunch? Dinner? Going to a potluck?
+  utter_cannot_help:
+  - text: Sorry boss! No can do - I'm just a recipe bot.
+  utter_cheer_up:
+  - text: Well I think you're lovely
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_explain_whats_possible:
+  - text: I'm good at finding recipes!
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa. Here to cater to all your recipe needs
+  utter_new_user_greet:
+  - text: Hey! Haven't seen you around here before! If I have, please sign in
+  utter_store_recipe_confirmation:
+  - text: Sure thing! I'll save this in your 'try later' folder
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
 slots:
   diet:
     type: text
   flavor:
     type: text
-  purpose:
-    type: text
   ingredient:
     type: list
-
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-- utter_ask_flavor
-- utter_ask_diet_info
-- utter_ask_purpose
-- utter_ask_ingedients
-- utter_store_recipe_confirmation
-- action_recipe_search
-- action_star_wars_search
-- ask_for_star_wars_character_info
-- utter_cannot_help
-- utter_explain_whats_possible
-
-responses:
-  utter_ask_flavor:
-    - text: "What type of flavor are you looking for? Spicy? Sweet?"
-    - text: "What are you in the mood for? Something sweet?"
-  utter_ask_diet_info:
-    - text: "Are you on any special diets?"
-    - text: "To give you a personalized recipe, I need your diet preference"
-  utter_ask_ingedients:
-    - text: "So far I know you want to use the following ingredients:
-            {ingredient}. Are there any other ingredients you want to use?"
-  utter_greet:
-    - text: "Hey! How are you?"
-  utter_cheer_up:
-    - text: "Well I think you're lovely"
-  utter_new_user_greet:
-    - text: "Hey! Haven't seen you around here before! If I have, please sign in"
-  utter_did_that_help:
-    - text: "Did that help you?"
-  utter_happy:
-    - text: "Great, carry on!"
-  utter_goodbye:
-    - text: "Bye"
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa. Here to cater to all your recipe needs"
-  utter_ask_purpose:
-    - text: "What do you need that for? Breakfast? Lunch? Dinner? 
-             Going to a potluck?"
-  utter_store_recipe_confirmation:
-    - text: "Sure thing! I'll save this in your 'try later' folder"
-  utter_cannot_help:
-    - text: "Sorry boss! No can do - I'm just a recipe bot."
-  utter_explain_whats_possible:
-    - text: "I'm good at finding recipes!"
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  purpose:
+    type: text
