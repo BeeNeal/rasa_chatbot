@@ -116,12 +116,6 @@
 - add this to my save for later
 - file this away for later
 
-## intent:provide_ingredient
-- I'm searching for a recipe that uses [olives](ingredient)
-- I have [olives](ingredient) I want to use up
-- I need a recipe that uses olives
-- I'm looking for a recipe with pistachios
-
 ## intent:want_recipe
 - looking for a recipe
 - looking for
@@ -151,6 +145,22 @@
 - I'm [paleo](diet) and need a [dessert](purpose) recipe
 - Do you have any [paleo](diet) [dessert](purpose) recipes?
 - Do you have any recipes for a [paleo](diet) [dessert](purpose)?
+- I want something [sweet](flavor)
+- I'm craving something [sweet](flavor)
+- I want something [spicy](flavor)
+- I'm hungry for meat
+- I'd like something [salty](flavor)
+- I'm in the mood for something [salty](flavor)
+- I'm in the mood for something [savory](flavor)
+- Something [sweet](flavor) sounds good
+- Something [sugary](flavor) sounds good
+- I'm searching for a recipe that uses [olives](ingredient)
+- I have [olives](ingredient) I want to use up
+- I need a recipe that uses [olives](ingredient)
+- I'm looking for a recipe with [pistachios](ingredient)
+- I need a [dessert](purpose) recipe for a [potluck](purpose)
+- I want to use [olives](ingredient)
+- I want to use [fenugreek](ingredient)
 
 ## intent:provide_flavor_info
 - [spicy](flavor)
@@ -169,17 +179,7 @@
 - I eat [keto](diet)
 - I'm strictly [vegan](diet)
 - I'm a strict [vegan](diet)
-
-## intent:search_recipe_by_flavor
-- I want something [sweet](flavor)
-- I'm craving something [sweet](flavor)
-- I want something [spicy](flavor)
-- I'm hungry for meat
-- I'd like something [salty](flavor)
-- I'm in the mood for something [salty](flavor)
-- I'm in the mood for something [savory](flavor)
-- Something [sweet](flavor) sounds good
-- Something [sugary](flavor) sounds good
+- [paleo](diet: paleo)
 
 ## intent:inform_location
 - [San Francisco](location)
@@ -203,6 +203,14 @@
 - paleo
 - primal
 - grain-free
+
+## synonym: gf
+- gluten-free
+- no gluten
+- without gluten
+- no wheat
+- wheat free
+- without wheat
 
 ## synonym: quick
 - quick

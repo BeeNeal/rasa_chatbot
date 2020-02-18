@@ -12,13 +12,15 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from rasa_sdk.forms import FormAction
+from /SpoonacularAPI/spoon_trial import *
 
 class ActionFetchRecipe(Action):
       
 # refers to the name of the action used when creating training stories
 # how rasa knows which action to run when predicted
     def name(self) -> Text:
-        return "action_recipe_searchs" # FIX THIS *&#*#*#&@)& (take off s)
+        return "action_recipe_search" # FIX THIS *&#*#*#&@)& (take off s)
 # define what the action does
     def run(self, dispatcher: CollectingDispatcher,
         # tracker keeps track of conversation state, and which slots should be
@@ -89,3 +91,40 @@ def fetch_recipe():
         return "action_recipe_search"
 
     dispatcher.utter_message("This is working!") 
+
+def test_custom_action(FormAction):
+    """ """
+
+    def name(self) -> Text:
+        return "action_recipe_search"
+
+    @staticmethod
+    def required_slots(tracker:Tracker) -> List[Text]:
+        # returns names of all slots that must be provides
+        return ["purpose", "diet_type"]
+    
+    # can define slot_mappings here (8:50 ep 8 on rasa vid)
+
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]
+              ) -> List[Dict]:
+        """Once req slots are filled, print buttons for available options"""
+
+        purpose = tracker.get_slot('purpose')
+        diet_type = tracker.get_slot("diet_type")
+
+        results = ask_spoonacular()
+
+        if len(results) == 0:
+            return.utter_message("Sorry - try again")
+
+            return []
+
+        buttons = []
+
+def ask_spoonacular(purpose, diet_type):
+    """ """
+
+    pass

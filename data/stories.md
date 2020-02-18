@@ -30,7 +30,7 @@ each ## are example stories -
 * want_recipe{"diet":"keto"}
 	- utter_ask_flavor
 	- slot{"flavor":"spicy"}
-<!--general inform is better, than capture wider range of entities -->
+<!--general inform is better, then capture wider range of entities -->
 * inform{"flavor":"spicy"}
   - action_recipe_search
 * thanks
@@ -45,11 +45,6 @@ each ## are example stories -
 	- utter_ask_flavor
 	-slot{"flavor":"spicy"}
 
-<!--general inform is better, than capture wider range of entities -->
-* inform{"flavor":"spicy"}
-   - action_recipe_search
-* thanks
-  - utter_goodbye
 
 ## happy path
 * greet

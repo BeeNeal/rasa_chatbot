@@ -23,8 +23,10 @@ entities:
 - location
 - purpose
 intents:
-- out_of_scope
 - greet
+- provide_diet_info
+- want_recipe
+- out_of_scope
 - goodbye
 - affirm
 - deny
@@ -33,15 +35,11 @@ intents:
 - mood_unhappy
 - bot_challenge
 - inform_location
-- provide_diet_info
 - provide_flavor_info
 - provide_recipe
-- provide_ingredient
 - thanks
-- want_recipe
 - ask_about_star_wars
 - ask_whats_possible
-- search_recipe_by_flavor
 - provide_star_wars_char_info
 responses:
   utter_ask_diet_info:
