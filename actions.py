@@ -133,3 +133,30 @@ def ask_spoonacular(purpose, diet_type):
     data = response.json()
     print(data[0]['name'])
     return data[0]
+
+# form action  
+# https://blog.rasa.com/building-contextual-assistants-with-rasa-formaction/?_ga=2.113205124.1615998654.1582937927-123819044.1569534514
+
+class RecipeForm:
+    """Custom form action to fill required recipe slots """
+
+    def name(self):
+        """identifies as recipe form """
+
+        return "recipe_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        """List of required slots form must fill for recipe request"""
+
+        if tracker.get_slot("purpose") == "potluck"
+            return ["diet", "flavor", "purpose", "number_people"]
+        else:
+            return ["diet", "flavor", "purpose"]
+
+    def submit(self):
+        """Define what the form has to do
+            	after all required slots are filled"""
+
+       	dispatcher.utter_template('utter_submit', tracker)
+        return []

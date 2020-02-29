@@ -49,12 +49,19 @@ each ## are example stories -
 ## happy path
 * greet
   - utter_greet
-* inform{"purpose": "dessert", "diet_type":"keto"}
+* request_recipe
+   - recipe_form
+   - form{"name: "recipe_form"}
+   - form{"name": null}
+   - utter_slots_values
+* thankyou
+   - utter_goodbye
+
+<!-- {"purpose": "dessert", "diet_type":"keto"}
    - action_recipe_search
    - form{"name: "action_recipe_search"}
    - form{"name": null}
-* thankyou
-   - utter_goodbye
+ -->
 
 ## save recipe for later path
 * provide_recipe

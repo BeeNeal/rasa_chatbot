@@ -2,7 +2,7 @@ actions:
 - action_recipe_search
 - action_star_wars_search
 - ask_for_star_wars_character_info
-- utter_ask_diet_info
+- utter_ask_diet
 - utter_ask_flavor
 - utter_ask_ingedients
 - utter_ask_purpose
@@ -17,6 +17,7 @@ actions:
 - utter_new_user_greet
 - utter_store_recipe_confirmation
 forms:
+- recipe_form
 - action_recipe_search
 
 entities:
@@ -27,7 +28,7 @@ entities:
 - purpose
 intents:
 - greet
-- provide_diet_info
+- provide_diet
 - want_recipe
 - out_of_scope
 - goodbye
@@ -45,7 +46,7 @@ intents:
 - ask_whats_possible
 - provide_star_wars_char_info
 responses:
-  utter_ask_diet_info:
+  utter_ask_diet:
   - text: Are you on any special diets?
   - text: To give you a personalized recipe, I need your diet preference
   utter_ask_flavor:
@@ -88,3 +89,6 @@ slots:
     type: list
   purpose:
     type: text
+
+#  form template name
+    # utter_ask_slot
