@@ -49,9 +49,12 @@ each ## are example stories -
 ## happy path
 * greet
   - utter_greet
-* mood_great
-  - utter_happy
-
+* inform{"purpose": "dessert", "diet_type":"keto"}
+   - action_recipe_search
+   - form{"name: "action_recipe_search"}
+   - form{"name": null}
+* thankyou
+   - utter_goodbye
 
 ## save recipe for later path
 * provide_recipe
@@ -101,3 +104,4 @@ each ## are example stories -
 * greet
     - action_default_ask_affirmation
 * out_of_scope
+

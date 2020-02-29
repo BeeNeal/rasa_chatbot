@@ -123,8 +123,13 @@ def test_custom_action(FormAction):
             return []
 
         buttons = []
+        message = "Here is the ingredient: {}".format(results[0])
+        dispatcher.utter_button_message(message, buttons)
 
 def ask_spoonacular(purpose, diet_type):
-    """ """
+    """TEST """
 
-    pass
+    response = api.parse_ingredients("3.5 cups King Arthur flour", servings=1)
+    data = response.json()
+    print(data[0]['name'])
+    return data[0]

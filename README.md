@@ -10,8 +10,14 @@ as well as specified ingredients.
 
 ## Getting Started
 
-create a virtual environment \
-pip install -r requirements.txt
+create a virtual environment 
+$ virtualenv env
+activate virtual environment
+$ source env/bin/activate
+$ git clone https://github.com/BeeNeal/rasa_chatbot.git
+$ cd rasa_chatbot
+$ pip install -r requirements.txt
+$ rasa train nlu
 
 ## Built With
 
@@ -26,6 +32,9 @@ pip install -r requirements.txt
 - when integrating with RC site, take user preferences from DB (such as user diet preference)
 - add story for a user preference if didn't find a recipe under that diet preference
 
+## Flow
+1) Bot greets user with list of what can do (welcome back vs initial greet with prompt for sign in) btns + text option
+2) 
 
 ## License
 

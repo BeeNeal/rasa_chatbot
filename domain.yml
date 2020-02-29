@@ -16,6 +16,9 @@ actions:
 - utter_iamabot
 - utter_new_user_greet
 - utter_store_recipe_confirmation
+forms:
+- action_recipe_search
+
 entities:
 - diet
 - flavor
