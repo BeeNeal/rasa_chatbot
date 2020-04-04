@@ -5,17 +5,6 @@ each ## are example stories -
     - action taken by assistant
  -->
 
-## determine preferences
-* greet
-	- utter_new_user_greet
-
-## provide purpose
-* greet
-  - utter_greet
-* want_recipe
-	- action_recipe_search
-  - utter_ask_purpose
-
 ## Search recipe happy path
 * greet
   - utter_greet
@@ -24,12 +13,40 @@ each ## are example stories -
 * thanks
   - utter_goodbye
 
+## Search recipe with ingredient happy path
+* greet
+   -utter_greet
+* want_recipe{"ingredient:"olives"}
+   -search_recipe_by_ingredient
+   -utter_confirm_appeasement
+* affirm
+
+## Search recipe with ingredient sad path
+* greet
+   -utter_greet
+* want_recipe{"ingredient:"olives"}
+   -action_search_recipe_by_ingredient
+   -confirm_appeasement
+* deny
+   -utter_ask_purpose
+
+## determine preferences
+* greet
+	- utter_new_user_greet
+
+## provide purpose
+* greet
+  - utter_greet
+* want_recipe
+  - action_recipe_search
+  - utter_ask_purpose
+
 ## search recipe + flavor query
 * greet
   - utter_greet
 * want_recipe{"diet":"keto"}
-	- utter_ask_flavor
-	- slot{"flavor":"spicy"}
+  - utter_ask_flavor
+  - slot{"flavor":"spicy"}
 <!--general inform is better, then capture wider range of entities -->
 * inform{"flavor":"spicy"}
   - action_recipe_search
@@ -40,22 +57,22 @@ each ## are example stories -
 * greet
   - utter_greet
 * want_recipe
-	- utter_ask_diet_info
-	- slot{"diet":"keto"}
-	- utter_ask_flavor
-	-slot{"flavor":"spicy"}
+  - utter_ask_diet_info
+  - slot{"diet":"keto"}
+  - utter_ask_flavor
+  - slot{"flavor":"spicy"}
 
 
 ## happy path
 * greet
   - utter_greet
 * request_recipe
-   - recipe_form
-   - form{"name: "recipe_form"}
-   - form{"name": null}
-   - utter_slots_values
+  - recipe_form
+  - form{"name: "recipe_form"}
+  - form{"name": null}
+  - utter_slots_values
 * thankyou
-   - utter_goodbye
+  - utter_goodbye
 
 <!-- {"purpose": "dessert", "diet_type":"keto"}
    - action_recipe_search
@@ -112,3 +129,6 @@ each ## are example stories -
     - action_default_ask_affirmation
 * out_of_scope
 
+
+
+<!-- how to determine not_appeased b/c not ___diet, or with new intent of need for a potluck? -->

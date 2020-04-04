@@ -14,6 +14,9 @@
 - awesome, you're the best
 - you're the best
 - appreciate it
+- this is perfect
+- wonderful
+- looks good
 
 ## intent:bot_challenge
 - are you a bot?

@@ -16,9 +16,11 @@ actions:
 - utter_iamabot
 - utter_new_user_greet
 - utter_store_recipe_confirmation
+- utter_confirm_appeasement
+
 forms:
 - recipe_form
-- action_recipe_search
+- action_recipe_search_form
 
 entities:
 - diet
@@ -77,6 +79,9 @@ responses:
   - text: Hey! Haven't seen you around here before! If I have, please sign in
   utter_store_recipe_confirmation:
   - text: Sure thing! I'll save this in your 'try later' folder
+  utter_confirm_appeasement: 
+  - text: Does this recipe work for you?
+
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
